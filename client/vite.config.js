@@ -3,11 +3,6 @@ import react from '@vitejs/plugin-react';
 import { copyFileSync } from 'fs';
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/', // ใช้ '/' สำหรับ Netlify หรือปรับเป็น subpath ถ้าใช้ path อื่น
-  build: {
-    outDir: 'dist', // ระบุโฟลเดอร์ output สำหรับ build
-  },
   plugins: [
     react(),
     {
@@ -18,4 +13,8 @@ export default defineConfig({
       },
     },
   ],
+  base: '/', // ใช้ '/' สำหรับ Netlify หรือปรับเป็น subpath ถ้าใช้ path อื่น
+  build: {
+    outDir: 'dist', // ระบุโฟลเดอร์ output สำหรับ build
+  },
 });
